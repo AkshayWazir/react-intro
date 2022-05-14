@@ -50,4 +50,18 @@
 }
 
 .styles-informal {
+  font-size: 4vh;
+}
+
+.smallText {
+  font-size: 2vh;
+}
+
+.button {
+  width: 80%;
+  margin: 2vh 8% 2vh 8%;
+  background-color: blue;
+  color: white;
+  padding: 2%;
+  border-radius: 1vh;
 }
