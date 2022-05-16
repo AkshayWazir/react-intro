@@ -1,0 +1,17 @@
+@import url("../App.css");
+
+.loginpage-main-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--light-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginpage-cc {
+  height: 50vh;
+  width: 50vw;
+  background-color: var(--white);
+}

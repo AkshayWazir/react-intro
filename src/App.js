@@ -1,8 +1,11 @@
 import "./App.css";
 import React from "react";
+import { LoginPage, SignupPage } from "./screens";
 
-function App() {
-  return <div className="App"></div>;
+export default function App() {
+  return (
+    <div className="App">
+      <LoginPage />
+    </div>
+  );
 }
-
-export default App;
