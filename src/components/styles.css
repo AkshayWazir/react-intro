@@ -18,3 +18,35 @@
   font-family: var(--def-font);
   color: var(--white);
 }
+
+.input-field {
+  min-width: 20vw;
+  min-height: 3vh;
+  border: none;
+  border-bottom: 2px solid #000;
+  margin: 1vh;
+  font-size: 2vh;
+  font-family: var(--def-font);
+}
+
+.input-field:focus {
+  outline: none;
+  border-bottom: 2px solid var(--yellow);
+}
+
+.align-horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.input-field-checkbox {
+  height: 3vh;
+  width: 3vh;
+  margin-right: 2vh;
+}
+
+.input-field-checkbox-hint {
+  font-family: var(--def-font);
+  color: var(--dark);
+}
