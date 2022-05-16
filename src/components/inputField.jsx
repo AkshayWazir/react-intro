@@ -2,16 +2,15 @@ import React, { useState } from "react";
 import "./styles.css";
 
 export default function InputField(props) {
-  const {} = props;
-  const [content, setContent] = useState();
+  const { value, fetchValue = () => {} } = props;
 
   function fieldValueChange(event) {
-    setContent(event.target.value);
+    fetchValue(event.target.value);
   }
 
   return (
     <span>
-      <input value={content} onChange={fieldValueChange} />
+      <input value={value} onChange={fieldValueChange} />
     </span>
   );
 }

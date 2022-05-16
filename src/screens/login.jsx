@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
-import { Button } from "../components";
+import { Button, InputField } from "../components";
 
 const LoginPage = () => {
+  const [login, setLogin] = useState();
+
   function buttonClicked() {
     alert("Clicked Button from Login");
   }
@@ -12,10 +14,9 @@ const LoginPage = () => {
       <div className="loginpage-cc">
         <p>LOGO</p>
         <p>Login with your Credentails</p>
+        <p>{login}</p>
+        <InputField value={login} fetchValue={(val) => setLogin(val)} />
         <Button action={buttonClicked} title="Login" />
-        <Button action={() => alert("Signup Clicked")} title="Signup" />
-        <Button action={() => alert("Signup Register")} title="Register" />
-        <Button action={() => alert("Signup Forget")} title="Forget" />
       </div>
     </div>
   );
