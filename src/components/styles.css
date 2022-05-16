@@ -1,1 +1,20 @@
 @import url("../App.css");
+
+.button-back {
+  height: 5vh;
+  min-width: 15vw;
+  max-width: 20vw;
+  background-color: var(--purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1vh;
+  box-shadow: 5px 5px 10px #00000022;
+  cursor: pointer;
+  margin: 1vh;
+}
+
+.button-text {
+  font-family: var(--def-font);
+  color: var(--white);
+}
