@@ -108,4 +108,35 @@
   height: 20vh;
   width: 40vw;
   margin: 2vh auto;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.shopping-img {
+  height: 80%;
+  width: 100%;
+  margin: auto 0;
+}
+
+.shopping-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shopping-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.text-button {
+  height: 3vh;
+  width: 3vh;
+  font-size: 2vh;
+  color: black;
+  text-align: center;
+  box-shadow: 1px 1px 5px #00000022;
+  cursor: pointer;
 }
