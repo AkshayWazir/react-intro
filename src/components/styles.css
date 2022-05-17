@@ -50,3 +50,62 @@
   font-family: var(--def-font);
   color: var(--dark);
 }
+
+.dash-header {
+  height: 10vh;
+  width: 100vw;
+  background-color: black;
+}
+
+.dash-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cart-icon {
+  height: 5vh;
+  width: 5vh;
+}
+
+.cart-container {
+  height: 8vh;
+  width: 8vh;
+  background-color: brown;
+  border-radius: 8vh;
+  position: relative;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-item-label {
+  position: absolute;
+  top: -1.5vh;
+  right: -1.5vh;
+  font-size: 2vh;
+  background-color: white;
+  font-family: var(--def-font);
+  height: 3vh;
+  width: 3vh;
+  border-radius: 3vh;
+  text-align: center;
+}
+
+.cart-cost-label {
+  font-family: var(--def-font);
+  color: white;
+  font-size: 2vh;
+  margin-left: 5vh;
+}
+
+.shopping-container {
+  background-color: white;
+  box-shadow: 0px 0px 5px #00000044;
+  height: 20vh;
+  width: 40vw;
+  margin: 2vh auto;
+}
