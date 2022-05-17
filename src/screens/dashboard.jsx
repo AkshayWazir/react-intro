@@ -6,18 +6,22 @@ export default function Dashboard() {
   const [cart, setCart] = useState([]);
 
   function addItemsToCart(item) {
+    let temp = [...cart, item];
+    console.log(temp);
     setCart([...cart, item]);
   }
 
   function removeItem(item) {
-    let temp = [...cart];
-    for (let i = 0; i < temp.length; i++) {
-      if (temp[i].id === item.id) {
-        temp.splice(i);
+    let temp,
+      found = false;
+    for (let i = 0; i < cart.length; i++) {
+      if (cart[i].id === item.id) {
+        temp = [...cart.slice(0, i), ...cart.slice(i + 1, cart.length)];
+        found = true;
         break;
       }
     }
-    setCart(temp);
+    setCart(found ? temp : cart);
   }
 
   return (
