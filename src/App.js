@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import { Dashboard } from "./screens";
+import { TestComponent } from "./screens";
 import axios from "axios";
 
 export default function App() {
@@ -10,7 +10,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <Dashboard />
+      <TestComponent />
     </div>
   );
 }
