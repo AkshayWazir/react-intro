@@ -28,3 +28,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+.common-cont {
+  height: 30vh;
+  width: 30vh;
+  box-shadow: 1vh 1vh 1vh #00000022;
+  margin: 2vh;
+}
