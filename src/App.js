@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
-import { ShoppingCart } from "./screens";
+import { NewLogin } from "./screens";
 import axios from "axios";
 
 export default function App() {
@@ -12,7 +12,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <ShoppingCart />
+      <NewLogin />
     </div>
   );
 }
