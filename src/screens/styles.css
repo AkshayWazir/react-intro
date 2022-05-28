@@ -66,3 +66,24 @@
   align-items: center;
   justify-content: center;
 }
+
+.card-container {
+  height: 20vh;
+  width: 20vh;
+  background-color: white;
+  box-shadow: 5px 5px 12px #00000022;
+  margin: 2vh;
+}
+
+.card-arrangement {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.arrange-horizontal {
+  display: flex;
+  flex-direction: row;
+  width: 10vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
