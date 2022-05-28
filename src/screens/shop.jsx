@@ -14,16 +14,34 @@ class ShopDashboard extends React.Component {
     };
   }
 
-  increment = (id) => {};
+  increment = (id) => {
+    const res = this.state.cards.map((item) => {
+      if (item.id === id) {
+        return { ...item, quant: item.quant + 1 };
+      } else {
+        return item;
+      }
+    });
 
-  decrement = (id) => {};
+    this.setState({ cards: res });
+  };
+
+  decrement = (id) => {
+    const res = this.state.cards.map((item) => {
+      if (item.id === id && item.quant > 0) {
+        return { ...item, quant: item.quant - 1 };
+      } else {
+        return item;
+      }
+    });
+    this.setState({ cards: res });
+  };
 
   render() {
     const { cards } = this.state;
-    let totalQuant = 0,
-      totalPrice = 0;
+    let totalQuant = cards.reduce((a, b) => a + b.quant, 0),
+      totalPrice = cards.reduce((a, b) => a + b.price * b.quant, 0);
 
-    // TODO : calculate and display total quantity and price
     return (
       <div>
         <div>
@@ -35,7 +53,7 @@ class ShopDashboard extends React.Component {
           {cards.map((item) => {
             const { title, price, quant, id } = item;
             return (
-              <div className="card-container">
+              <div className="card-container" key={id}>
                 <p>{title}</p>
                 <p>{price}</p>
                 <div className="arrange-horizontal">
