@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+import { ErrorBoundary } from "../components";
 
 class ShopDashboard extends React.Component {
   constructor(props) {
@@ -18,6 +19,8 @@ class ShopDashboard extends React.Component {
     const res = this.state.cards.map((item) => {
       if (item.id === id) {
         return { ...item, quant: item.quant + 1 };
+      } else if (id === 0) {
+        throw new Error("I Crashed");
       } else {
         return item;
       }
@@ -53,6 +56,7 @@ class ShopDashboard extends React.Component {
           {cards.map((item) => {
             const { title, price, quant, id } = item;
             return (
+              //   <ErrorBoundary key={id}>
               <div className="card-container" key={id}>
                 <p>{title}</p>
                 <p>{price}</p>
@@ -66,6 +70,7 @@ class ShopDashboard extends React.Component {
                   </div>
                 </div>
               </div>
+              //   </ErrorBoundary>
             );
           })}
         </div>
