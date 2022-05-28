@@ -5,6 +5,33 @@ class NewLogin extends React.Component {
   constructor(props) {
     super(props);
     this.state = { counter: 0 };
+    console.log("Constructor");
+  }
+
+  componentDidMount = () => {
+    console.log("Component did Mount");
+  };
+
+  static getDerivedStateFromProps(props, state) {
+    console.log("Get Drived Props called");
+    return { counter: props.val };
+  }
+
+  shouldComponentUpdate() {
+    console.log("Should component update");
+    if (this.state.counter % 2 === 0) {
+      return false;
+    }
+    return true;
+  }
+
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    console.log("Snapshot Update Called");
+    return null;
+  }
+
+  componentDidUpdate() {
+    console.log("Component Did Update");
   }
 
   increment = () => {
@@ -23,6 +50,7 @@ class NewLogin extends React.Component {
   };
 
   render() {
+    console.log("Render called");
     const { counter } = this.state;
     return (
       <div className="mainContiner">
