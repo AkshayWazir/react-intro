@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./styles.css";
 import { ErrorBoundary } from "../components";
 
@@ -46,7 +46,7 @@ class ShopDashboard extends React.Component {
       totalPrice = cards.reduce((a, b) => a + b.price * b.quant, 0);
 
     return (
-      <div>
+      <Fragment>
         <div>
           <p className="title-content">
             Total Content : {totalQuant} , Total Price : {totalPrice}
@@ -74,7 +74,7 @@ class ShopDashboard extends React.Component {
             );
           })}
         </div>
-      </div>
+      </Fragment>
     );
   }
 }
