@@ -1,0 +1,42 @@
+@import url("../../App.css");
+
+.input-text-valid {
+  border: 2px solid #00000099;
+  margin: 1vh;
+  height: 4vh;
+  width: 20vw;
+  border-radius: 1vh;
+  font-size: 2vh;
+  font-family: var(--def-font);
+}
+
+.input-text-invalid {
+  border: 2px solid #ff000099;
+  margin: 1vh;
+  height: 4vh;
+  width: 20vw;
+  border-radius: 1vh;
+  font-size: 2vh;
+  font-family: var(--def-font);
+  outline: none;
+}
+
+.input-text-valid:focus {
+  outline: none;
+}
+
+.normal-message {
+  font-family: var(--def-font);
+  color: blue;
+  font-size: 2vh;
+  margin: 0 0 0 1vh;
+}
+.error-message {
+  font-family: var(--def-font);
+  color: red;
+  font-size: 2vh;
+  margin: 0 0 0 1vh;
+}
+
+.input-text-valid-cont {
+}
