@@ -1,25 +1,21 @@
-import React, { Fragment, useState } from "react";
+import React from "react";
+import HocInput from "./hoc";
 import "./styles.css";
 
 const InputTextValid = (props) => {
-  const { validationFunction = () => true } = props;
-  const [errorMessage, setErrorMessage] = useState("");
+  const { validationFunction, error } = props;
 
   function validationCheck(event) {
     const value = event.target.value;
-    if (!validationFunction(value)) {
-      setErrorMessage("Input content Incorrect");
-    } else {
-      setErrorMessage("");
-    }
+    validationFunction(value);
   }
 
   return (
     <div className="input-text-valid-cont">
       <input className="input-text-valid" onChange={validationCheck} />
-      <p className="error-message">{errorMessage}</p>
+      <p className="error-message">{error ? "Input content Incorrect" : ""}</p>
     </div>
   );
 };
 
-export default InputTextValid;
+export default HocInput(InputTextValid);

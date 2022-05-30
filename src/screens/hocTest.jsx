@@ -17,9 +17,12 @@ const CounterScreen = (props) => {
     <Fragment>
       {/* <OnClickCount />
       <OnHoverCounter /> */}
-      <InputDataDisp validationFunction={validText} />
-      <InputTextValid validationFunction={validText} />
-      <InputWithCss validationFunction={validText} />
+      <p>InputDataDisp</p>
+      <InputDataDisp validation={validText} />
+      <p>InputTextValid</p>
+      <InputTextValid validation={validText} />
+      <p>InputWithCss</p>
+      <InputWithCss validation={validText} />
     </Fragment>
   );
 };

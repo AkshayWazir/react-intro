@@ -1,17 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
+import HocInput from "./hoc";
 import "./styles.css";
 
 const InputWithCss = (props) => {
-  const { validationFunction = () => true } = props;
-  const [error, setError] = useState(false);
+  const { validationFunction, error } = props;
 
   function validationCheck(event) {
     const value = event.target.value;
-    if (!validationFunction(value)) {
-      setError("Input content Incorrect");
-    } else {
-      setError("");
-    }
+    validationFunction(value);
   }
 
   return (
@@ -21,4 +17,4 @@ const InputWithCss = (props) => {
   );
 };
 
-export default InputWithCss;
+export default HocInput(InputWithCss);
