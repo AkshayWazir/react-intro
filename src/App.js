@@ -1,11 +1,11 @@
 import "./App.css";
 import React from "react";
-import { PopupWindows } from "./screens";
+import { CounterScreen } from "./screens";
 
 export default function App() {
   return (
     <div className="App">
-      <PopupWindows />
+      <CounterScreen />
     </div>
   );
 }

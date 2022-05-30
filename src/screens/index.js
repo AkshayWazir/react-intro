@@ -6,3 +6,4 @@ export { default as ShoppingCart } from "./shoppingCart";
 export { default as NewLogin } from "./newLogin";
 export { default as ShopDashboard } from "./shop";
 export { default as PopupWindows } from "./popupWIndow";
+export { default as CounterScreen } from "./hocTest";

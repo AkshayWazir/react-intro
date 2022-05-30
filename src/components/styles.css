@@ -191,3 +191,17 @@
   width: 50vw;
   background-color: white;
 }
+
+.counter {
+  background-color: blue;
+  color: white;
+  font-family: var(--def-font);
+  height: 10vh;
+  width: 10vh;
+  margin: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vh;
+}
