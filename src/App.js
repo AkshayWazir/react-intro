@@ -1,11 +1,11 @@
 import "./App.css";
 import React from "react";
-import { CounterScreen } from "./screens";
+import { ButtonTest } from "./screens";
 
 export default function App() {
   return (
     <div className="App">
-      <CounterScreen />
+      <ButtonTest />
     </div>
   );
 }

@@ -5,3 +5,4 @@ export { default as DashContainer } from "./dashContent";
 export { default as ShoppingItem } from "./shoppingItem";
 export { default as ErrorBoundary } from "./errorBoundary";
 export { default as PopupComp } from "./Popup";
+export { default as GenButton } from "./genButton";
