@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const HocCounter = (OrignalComponent) => {
   return class OrignalComp extends React.Component {
