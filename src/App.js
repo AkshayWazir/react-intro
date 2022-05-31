@@ -12,15 +12,15 @@ export default function App() {
       <Link to="/loginPage">To login Page</Link>
       <Link to="/newLogin">To New Login</Link>
       <Link to="/popupWindow">To Popup Window</Link>
-      <Link to="/shopDashboard">To Shop Dashboard</Link>
+      <Link to={`/product/${45}`}>To Shop Dashboard</Link>
       <Routes>
         <Route path="/buttonTest" element={<ButtonTest />} />
         <Route path="/counterScreen" element={<CounterScreen />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/loginPage" element={<LoginPage />} />
+        <Route path="/product/:productId" element={<LoginPage />} />
         <Route path="/newLogin" element={<NewLogin />} />
         <Route path="/popupWindow" element={<PopupWindows />} />
-        <Route path="/shopDashboard" element={<ShopDashboard />} />
+        <Route path="/productDetail/:productId" element={<ShopDashboard />} />
       </Routes>
     </Router>
   );

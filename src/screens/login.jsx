@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./styles.css";
 import { Button, InputField } from "../components";
+import { useParams } from "react-router-dom";
 
 const LoginPage = () => {
+  const { productId } = useParams();
   const [login, setLogin] = useState({ userName: "", email: "", password: "", confirmPass: "", policyAggre: false });
 
   useEffect(() => {
-    console.log("Login Component Loaded");
-  }, [login]);
+    console.log("Got Product ID ", productId);
+  }, []);
 
   function buttonClicked() {
     alert(login);
